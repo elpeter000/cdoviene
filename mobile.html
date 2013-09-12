@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container wrapper">
+            <header class="wrapper clearfix">
+                <h1 class="title"><a href="index.php"><img src="img/logo.png"></a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+            
+                <aside>
+                    <h3><img src="img/cdo-viene.png" id="cdollega"></h3>
+                    <p>Ahora pod&eacute;s consultar de forma r&aacute;pida cu&aacute;ndo llega el colectivo a tu parada</p>
+                                        
+                </aside>
+                
+               	<article>
+               	                	<div id="arrow"></div>
+
+                    <header class="t-right">
+                        <h1>Consult&aacute;</h1>
+                        <p>Para consultar un arribo<br />segu&iacute; los siguientes pasos:</p>
+                    </header>
+                    <section>
+                    	<form class="form-horizontal" action="consultar.php" id="calcular" >
+                    		<select name="lineas" id="lineas" required>
+			                </select>
+			                <select name="calles" id="calles">
+		                    	<option value="">Seleccion&aacute; una calle</option>
+	                    	</select>
+	                    	<select name="entrecalles" id="entrecalles">
+		                    	<option value="">Seleccion&aacute; una intersecci&oacute;n</option>
+	                    	</select>
+	                    	<div id="paradas"></div>
+	                    	<input name="parada" id="parada" placeholder="Ingres&aacute; el n&ordm; de parada" required >
+	                    	<button type="submit" id="submit" >&iquest;Cu&aacute;ndo viene?</button>
+	                    	<button type="button" id="esperar" style="display:none" >Esperar 10 seg...</button>
+	                    	
+	                    	<div style="clear:both"></div>
+	                    	
+	                    	<small><a href="http://clientes.bigbrand.com.ar/transporte/cdo.llega.v.4.beta/report.php" >Reportar error</a></small>
+	                    	
+                    	</form>
+                    	
+
+                    	<div id="calculando" style="display:none" class="f-right "><br><br><img src="img/ajax-loader.gif" ></div>
+                    	<div id="resultCalcular"></div>
+                    	
+                    </section>
+                    
+                    <?php if($_SESSION[llega][parada]): ?>
+                    
+                    <footer class="t-right clear">
+	                    <h5>Su &uacute;ltima consulta fue</h5>
+	                    <a href="#" onclick="$('#parada').val('<?php echo $_SESSION[llega][parada] ?>'); $('#lineas').val('<?php echo $_SESSION[llega][lineas]; ?>');"><?php echo $_SESSION[llega][parada]; ?></a>
+                    </footer>
+                    
+                    <?php endif; ?>
+                    
+                    <div class="clearfix"></div>
+                    
+                </article>
+
+
+
+            </div> <!-- #main -->
+            
+            <div class="main wrapper clearfix">
+            
+                <aside>
+                	
+                	<img src="img/mobile.png" class="f-left">
+                
+                    <h3>SMS 70705</h3>
+                    <h4>Hac&eacute; tu consulta enviando un sms al 70705</h4>
+                    <p>
+                    	<ul>
+                    		<li>Envi&aacute; <b>TUP</b> (espacio)</li>
+
+                    		<li><b>N&uacute;mero de PARADA</b> (espacio): busc&aacute; el n&uacute;mero (1 letra + 4 n&uacute;meros) dentro de un cartel destacado en la parada.</li>
+
+                    		<li><b>N&uacute;mero de L&iacute;nea</b></li>
+
+                    		<li><b>Envialo al 70705</b></li>
+
+                    		<li>Recibir&aacute;s un mensaje con los minutos que tardar&aacute;n en llegar los dos pr&oacute;ximos colectivos</li>
+                    	</ul>
+                    </p>
+                </aside>
+                
+            	<article>
+                    <section>
+	                        <img src="img/sms-img.png" >
+                    </section>
+                </article>
+                
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container wrapper">
+            <footer>
+            	<div class="f-left">
+	                <h3>Linea de consulta</h3>
+	                <h2>0800 999 2001</h2>
+	                <p>Sitio oficial de la Secretar&iacute;a de Transporte del Gobierno de Mendoza<br />
+	                &copy; 2013 - Todos los derechos reservados.</p>
+	                <br>
+	                <p><a href="report.php">Reportar errores</a></p>
+            	</div>
+            	<div class="f-right" >
+            		<p>
+            			<img src="img/Google-Play.png" alt="Get It on Google Play">
+            			<img src="img/App-Store.png" alt="Available on the iPhone App Store">
+            			<br />
+            			<small>Descarg&aacute; la aplicaci&oacute;n en tu smartphone</small>
+            		</p>
+            	</div>
+            	
+            	<div class="clearfix"></div>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/mobile.js"></script>
+
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
