@@ -32,7 +32,7 @@
             	var entrecalles = $("#entrecalles").find(':selected').val();
             	
             	
-            	$("#paradas").load('consultar-parada.php?id='+lineaId+'&calle='+calle+'&entrecalle='+entrecalles); 
+            	$("#paradas").load('http://clientes.bigbrand.com.ar/transporte/cdo.llega.v.4.beta/mobile/consultar-parada.php?id='+lineaId+'&calle='+calle+'&entrecalle='+entrecalles); 
             	$('#paradas').show('fast');
            	
 		    });
