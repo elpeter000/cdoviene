@@ -16,9 +16,7 @@
 		});
 		    
 		$('#calles').change(function() {
-		    
-			alert('cambio calles');
-		    
+		    		    
             var lineaId = $("#lineas").find(':selected').val();
             var calle = $("#calles").find(':selected').val();
             	
