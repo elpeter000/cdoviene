@@ -183,30 +183,29 @@ nav a:hover {
 
 @font-face {
   font-family: "Gotham Light";
-  src: url("f/Gotham-Light.eot");
-  src: local("?"),
+  src: url("f/Gotham-Light.eot") format('eot'),
     url("f/Gotham-Light.woff") format("woff"),
     url("f/Gotham-Light.otf") format("opentype"),
-    url("f/Gotham-Light.svg#filename") format("svg");
+    url("f/Gotham-Light.svg#webfontwTBKaDwa") format("svg");
   }   
    
 @font-face {
   font-family: "Gotham Bold";
-  src: url("f/Gotham-Bold.eot");
-  src: local("?"),
+  src: url("f/Gotham-Bold.eot") format('eot'),
     url("f/Gotham-Bold.woff") format("woff"),
     url("f/Gotham-Bold.otf") format("opentype"),
-    url("f/Gotham-Bold.svg#filename") format("svg");
+    url("f/Gotham-Bold.svg#webfontwTBKaDwa") format("svg");
   }
   
 @font-face {
   font-family: "Gotham Book";
-  src: url("f/Gotham-Book.eot");
-  src: local("?"),
+  src: url("f/Gotham-Book.eot") format('eot'),
     url("f/Gotham-Book.woff") format("woff"),
     url("f/Gotham-Book.otf") format("opentype"),
-    url("f/Gotham-Book.svg#filename") format("svg");
+    url("f/Gotham-Book.svg#webfontwTBKaDwa") format("svg");
   }
+
+  
   
 body {font: 18px/24px 'Gotham Light',Helvetica, Helvetica Neue, Arial;}
 
@@ -278,7 +277,7 @@ ul li {list-style: none; margin: 0.8em}
 
 nav {display: none; }
 
-#cdollega {width: 300px}
+#cdollega {width: 260px}
 
 footer h2 {
 	margin: 4px 0 10px 0;
