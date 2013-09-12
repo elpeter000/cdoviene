@@ -47,7 +47,8 @@
 				// Enviamos el formulario usando AJAX
 				$.ajax({
 					type: 'GET',
-					url: $(this).attr('action'),
+					//url: $(this).attr('action'),
+					url: 'http://clientes.bigbrand.com.ar/transporte/cdo.llega.v.4.beta/mobile/consultar.php',
 					data: $(this).serialize(),
 					// Mostramos un mensaje con la respuesta de PHP
 					success: function(data) {
@@ -68,30 +69,6 @@
 			});
 			
 			
-			
-			
-			$('#reportar').submit(function() {
-			
-				//alert('submit');
-				
-            	$('#reportar').hide();
-				$('#calculando').show();
-
-				// Enviamos el formulario usando AJAX
-				$.ajax({
-					type: 'GET',
-					url: $(this).attr('action'),
-					data: $(this).serialize(),
-					// Mostramos un mensaje con la respuesta de PHP
-					success: function(data) {
-					
-						
-						$('#resultCalcular').html(data).fadeIn('slow');
-						$('#calculando').hide();
-					}
-				})        
-			return false;
-			});
         
 		    	    
 });
