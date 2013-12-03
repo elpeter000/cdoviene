@@ -4,14 +4,13 @@
     id        = "com.phonegap.example"
     version   = "1.0.0">
 
-<name>Icon and Splash Demo</name>
+<name>Cuándo Viene?</name>
 
 <description>
-Basic application to test and demonstrate icons and splash screens.
 </description>
 
-<author href="https://build.phonegap.com" email="shardeep@adobe.com">
-Hardeep Shoker
+<author href="http://bigbrand.com.ar" email="pvargas@bigbrand.com.ar">
+BigBrand Agency
 </author>
 
 <preference name="phonegap-version" value="2.9.0" />
