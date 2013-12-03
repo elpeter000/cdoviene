@@ -14,6 +14,14 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
+        
+    <script type="text/javascript">
+        document.addEventListener('deviceready', function() {
+            navigator.notification.alert('device ready'); 
+        });
+    </script>
+            
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -74,14 +82,12 @@
                     	
                     </section>
                     
-                    <?php if($_SESSION[llega][parada]): ?>
                     
                     <footer class="t-right clear">
 	                    <h5>Su &uacute;ltima consulta fue</h5>
-	                    <a href="#" onclick="$('#parada').val('<?php echo $_SESSION[llega][parada] ?>'); $('#lineas').val('<?php echo $_SESSION[llega][lineas]; ?>');"><?php echo $_SESSION[llega][parada]; ?></a>
+	                    <a href="#" onclick="" id="consulta"></a>
                     </footer>
                     
-                    <?php endif; ?>
                     
                     <div class="clearfix"></div>
                     
@@ -91,36 +97,6 @@
 
             </div> <!-- #main -->
             
-            <div class="main wrapper clearfix">
-            
-                <aside>
-                	
-                	<img src="img/mobile.png" class="f-left">
-                
-                    <h3>SMS 70705</h3>
-                    <h4>Hac&eacute; tu consulta enviando un sms al 70705</h4>
-                    <p>
-                    	<ul>
-                    		<li>Envi&aacute; <b>TUP</b> (espacio)</li>
-
-                    		<li><b>N&uacute;mero de PARADA</b> (espacio): busc&aacute; el n&uacute;mero (1 letra + 4 n&uacute;meros) dentro de un cartel destacado en la parada.</li>
-
-                    		<li><b>N&uacute;mero de L&iacute;nea</b></li>
-
-                    		<li><b>Envialo al 70705</b></li>
-
-                    		<li>Recibir&aacute;s un mensaje con los minutos que tardar&aacute;n en llegar los dos pr&oacute;ximos colectivos</li>
-                    	</ul>
-                    </p>
-                </aside>
-                
-            	<article>
-                    <section>
-	                        <img src="img/sms-img.png" >
-                    </section>
-                </article>
-                
-            </div> <!-- #main -->
         </div> <!-- #main-container -->
 
         <div class="footer-container wrapper">
@@ -139,10 +115,10 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 
         <script src="js/mobile.js"></script>
+        <script src="js/jquery.cookie.js"></script>
 
 
         <script>
